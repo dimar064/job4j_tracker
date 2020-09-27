@@ -22,4 +22,14 @@ public class Tracker {
         }
         return rsl;
     }
+
+    public static void main(String[] args) {
+        Tracker tracker = new Tracker();
+        Item item = new Item();
+        item.setName("test1");
+        tracker.add(item);
+        System.out.println("item.getName() = " + item.getName());
+        Item result = tracker.findById(item.getId());
+        System.out.println("result = " + result);
+    }
 }
